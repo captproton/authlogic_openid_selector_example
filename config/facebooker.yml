@@ -12,7 +12,7 @@ development:
   api_key: 054f2060bd08b3d45936501ff38544db
   secret_key: c8cef61589f3cceda946ed1b6fcbc17e
   canvas_page_name:
-  callback_url: http://localhost:3000/
+  callback_url: http://localhost:3000
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
@@ -38,7 +38,7 @@ production:
   api_key: 054f2060bd08b3d45936501ff38544db
   secret_key: c8cef61589f3cceda946ed1b6fcbc17e
   canvas_page_name:
-  callback_url: http://localhost:3000/
+  callback_url: http://i280.heroku.com
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
