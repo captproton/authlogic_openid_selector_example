@@ -9,8 +9,8 @@
 # This should only be necessary until the final version of the new profile is released.
 
 development:
-  api_key: 054f2060bd08b3d45936501ff38544db
-  secret_key: c8cef61589f3cceda946ed1b6fcbc17e
+  api_key: ce253b7f12a4cd18d56df5188a6586f0
+  secret_key: 63b2fbc6dbcac8ec8a1d12a822130a20
   canvas_page_name:
   callback_url: http://localhost:3000
   pretty_errors: true
@@ -35,8 +35,8 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key: 054f2060bd08b3d45936501ff38544db
-  secret_key: c8cef61589f3cceda946ed1b6fcbc17e
+  api_key: ce253b7f12a4cd18d56df5188a6586f0
+  secret_key: 63b2fbc6dbcac8ec8a1d12a822130a20
   canvas_page_name:
   callback_url: http://i280.heroku.com
   pretty_errors: true
