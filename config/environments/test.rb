@@ -16,7 +16,39 @@ config.action_controller.perform_caching             = false
 # Disable request forgery protection in test environment
 config.action_controller.allow_forgery_protection    = false
 
-# Tell Action Mailer not to deliver emails to the real world.
+# Tell ActionMailer not to deliver emails to the real world.
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
+
+# rake gems:install RAILS_ENV=test
+
+config.gem 'factory_girl', 
+  :lib     => 'factory_girl',
+  :source  => 'http://gemcutter.org',
+  :version => '>= 1.2.3'
+config.gem 'shoulda',
+  :lib     => 'shoulda',
+  :source  => 'http://gemcutter.org',
+  :version => '>= 2.10.2'
+config.gem 'timecop',
+  :lib     => 'timecop',
+  :source  => 'http://gecutter.org',
+  :version => '0.3.4'
+config.gem 'fakeweb',
+  :version => '>= 1.2.8'
+config.gem 'mocha',
+  :version => '0.9.8',
+  :source  => 'http://gemcutter.org',
+  :lib     => 'mocha'
+
+HOST = 'localhost'
+
+begin
+  require 'factory_girl'
+  require 'redgreen'
+  require 'fakeweb'
+rescue LoadError
+end
+
+

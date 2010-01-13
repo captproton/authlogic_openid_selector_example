@@ -25,9 +25,6 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "authlogic"
-  config.gem "facebooker"
-  config.gem 'gravtastic', :version => '>= 2.1.0'
   
   #config.gem "authlogic-oid", :lib => "authlogic_openid"
 
@@ -44,11 +41,6 @@ Rails::Initializer.run do |config|
   # Force all environments to use the same logger level
   # (by default production uses :info, the others :debug)
   # config.log_level = :debug
-
-  # Make Time.zone default to the specified zone, and make Active Record store time values
-  # in the database in UTC, and return them converted to the specified local zone.
-  # Run "rake -D time" for a list of tasks for finding time zone names. Comment line to use default local time.
-  config.time_zone = 'UTC'
 
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
@@ -71,4 +63,54 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
+  
+  config.gem "authlogic"
+  config.gem "facebooker"
+  config.gem 'gravtastic', :version => '>= 2.1.0'
+
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.gem "delayed_job",
+    :lib     => "delayed_job",
+    :version => "1.8.4",
+    :source  => "http://gemcutter.org"
+  config.gem "paperclip",
+    :lib     => "paperclip",
+    :version => "2.3.1.1",
+    :source  => "http://gemcutter.org"
+#  config.gem "aws-s3",
+#    :lib     => "aws/s3",
+#    :version => "0.6.2" ## commented out 
+## becuase of:
+##   test_should_show_user(UsersControllerTest):
+## NameError: uninitialized constant Authlogic::TestCase::ControllerAdapter
+##    /opt/local/lib/ruby/gems/1.8/gems/aws-s3-0.6.2/lib/aws/s3/extensions.rb:206:in `const_missing'
+##    /test/functional/users_controller_test.rb:18:in `test_should_show_user'
+
+
+  config.gem "mime-types",
+    :lib     => "mime/types",
+    :version => "1.16"
+  config.gem "xml-simple",
+    :lib     => "xmlsimple",
+    :version => "1.0.12"
+  config.gem "utility_scopes",
+    :lib     => "utility_scopes",
+    :version => "0.3.1",
+    :source  => "http://gemcutter.org"
+  config.gem "formtastic", 
+    :lib     => 'formtastic', 
+    :source  => 'http://gemcutter.org',
+    :version => '0.9.7'
+  config.gem "inherited_resources", 
+    :lib     => 'inherited_resources', 
+    :source  => 'http://gemcutter.org',
+    :version => '1.0.2'
+  config.gem "activemerchant",
+    :lib     => 'active_merchant',
+    :version => '1.4.2'
+
+  
+    config.time_zone = 'Tijuana'
 end
